@@ -1,0 +1,25 @@
+<h1>Listing status_tests</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @status_tests.each do |status_test| %>
+  <tr>
+    <td><%= status_test.name %></td>
+    <td><%= status_test.content %></td>
+    <td><%= link_to 'Show', status_test %></td>
+    <td><%= link_to 'Edit', edit_status_test_path(status_test) %></td>
+    <td><%= link_to 'Destroy', status_test, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Status test', new_status_test_path %>
